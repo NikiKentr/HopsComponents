@@ -7,20 +7,12 @@ Hops components for grasshopper/ Rhino 3d
 
 Follow the steps to create an environment and install dependancies:
 
-#### Step 1: Install Python Environments
+#### Step 1: Create Python Environment
 
-First, ensure that you have the \`python3-venv\` package installed. Run the following command:
-
-```
-sudo apt install python3-venv
-```
-
-#### Step 2: Create Python Environment
-
-Create a new Python environment named \`hops_env\`:
+Create a new anaconda environment named \`hops_env\`:
 
 ```
-python3 -m venv hops_env
+conda create --name hops_env python=3.9
 ```
 
 #### Step 3: Activate Environment
@@ -28,7 +20,7 @@ python3 -m venv hops_env
 Activate the environment with:
 
 ```
-source hops_env/bin/activate
+conda activate hops_env
 ```
 
 ### 1.2 Clone
@@ -45,4 +37,8 @@ Install the dependencies (while environment is activated) with:
 
 ```
 pip install -r requirements.txt
+```
+OR using the .yml file:
+```
+conda env update --file environment.yml
 ```
